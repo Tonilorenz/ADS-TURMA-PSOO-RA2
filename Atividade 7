@@ -1,0 +1,45 @@
+class Aluno {
+  constructor(nome, ra, dataNascimento) {
+    this.nome = nome;
+    this.ra = ra;
+    this.dataNascimento = dataNascimento;
+  }
+
+  estudar() {
+    console.log(`${this.nome} está estudando.`);
+  }
+}
+
+class Matricula {
+  constructor(raAluno, idCurso, anoMatricula) {
+    this.raAluno = raAluno;
+    this.idCurso = idCurso;
+    this.anoMatricula = anoMatricula;
+  }
+
+  Matricular() {
+    console.log(`Matrícula realizada para o aluno com RA ${this.raAluno} no curso com ID ${this.idCurso} para o ano de ${this.anoMatricula}.`);
+  }
+}
+
+class Curso {
+  constructor(idCurso, nomeCurso, cargaHoraria) {
+    this.idCurso = idCurso;
+    this.nomeCurso = nomeCurso;
+    this.cargaHoraria = cargaHoraria;
+    this.quantidadeAlunos = 0;
+  }
+
+  IniciarCurso() {
+    console.log(`O curso de ${this.nomeCurso} (ID: ${this.idCurso}) com carga horária de ${this.cargaHoraria} horas está iniciando.`);
+  }
+}
+
+const aluno1 = new Aluno('João', 'N008571', '01/01/2000');
+aluno1.estudar();
+
+const matricula1 = new Matricula('N008571', '101', '2023');
+matricula1.Matricular();
+
+const curso1 = new Curso('101', 'Engenharia Civil', 2400);
+curso1.IniciarCurso();
